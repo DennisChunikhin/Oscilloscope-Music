@@ -46,7 +46,7 @@ This is done using a modified version of the marching squares algorithm. This ve
 #### 2. Playing Sound with Contours
 An image can be drawn on an oscilloscope by going through each of its contours and writing the x coordinate to first audio channel and the y coordinate to the second channel.
 
-It turns out that the human ear interprets virtually anything periodic as a pitch. To play a note with frequency $$f$$, it is therefore sufficient to create drawings of our image with period $$\frac{1}{f}$$. In other words, if the sample rate of our output audio file is $$r$$, we take a total of $$\frac{r}{f}$$ equally spaced points along the image contours and write them to the audio file as before.
+It turns out that the human ear interprets virtually anything periodic as a pitch. To play a note with frequency $`f`$, it is therefore sufficient to create drawings of our image with period $`\frac{1}{f}`$. In other words, if the sample rate of our output audio file is $`r`$, we take a total of $`\frac{r}{f}`$ equally spaced points along the image contours and write them to the audio file as before.
 
 `oscilloscope.py` contains an `OscilloscopeDrawer` class which implements these methods.
 
@@ -64,17 +64,17 @@ It can be shown geometrically that
 ```math
 a\sin(\theta)+b\sin(\phi) = c\sin(\theta+\chi)
 ```
-where $$c^2 = a^2 + b^2 + 2ab\cos(\alpha)$$, $$\sin(\chi) = \frac{b}{c}\sin(\alpha)$$, and $$\alpha = \phi-\theta$$.
+where $`c^2 = a^2 + b^2 + 2ab\cos(\alpha)`$, $`\sin(\chi) = \frac{b}{c}\sin(\alpha)`$, and $`\alpha = \phi-\theta`$.
 
-If $$\theta$$ and $$\phi$$, are the first and second most prominent frequencies given by the Fourier transform, we can often than note assume that b<<a, meaning b<<c. This assumption is merely based on qualitative observations.
+If $`\theta`$ and $`\phi`$, are the first and second most prominent frequencies given by the Fourier transform, we can often than note assume that b<<a, meaning b<<c. This assumption is merely based on qualitative observations.
 
-That b is much smaller than c implies that $$\chi$$ is small, more specifically that, on average, $$\chi<<\theta$$. Thus, we can approximate the weighted sum of sines as a signal with the most prominent frequency with amplitude modulated by c, that is $$c\sin(\theta)$$
+That b is much smaller than c implies that $$\chi$$ is small, more specifically that, on average, $`\chi<<\theta`$. Thus, we can approximate the weighted sum of sines as a signal with the most prominent frequency with amplitude modulated by c, that is $`c\sin(\theta)`$
 
-If we assume $$a^2 + b^2 << 2ab$$, by the first order Taylor approximation we have
+If we assume $`a^2 + b^2 << 2ab`$, by the first order Taylor approximation we have
 ```math
 c \approx \sqrt{a^2+b^2}\left( 1+\frac{ab}{a^2+b^2}\cos(\alpha) \right)
 ```
 
-Thus the two tones have frequencies $$f_1$$ and $$f_2$$, where $$\theta(t)=2 \pi f_1 t$$ and $$\phi(t)=2 \pi f_2 t$$, their combined chord can be represented as signal of frequency $$f_1$$ with the amplitude oscillating at a frequency of $$f_2-f_1$$ around the value $$\sqrt{a^2+b^2}$$.
+Thus the two tones have frequencies $`f_1`$ and $`f_2`$, where $`\theta(t)=2 \pi f_1 t`$ and $`\phi(t)=2 \pi f_2 t`$, their combined chord can be represented as signal of frequency $`f_1`$ with the amplitude oscillating at a frequency of $`f_2-f_1`$ around the value $`\sqrt{a^2+b^2}`$.
 
 This approximation seems to qualitatively hold rather nicely. Though it is not currently used by the project, it might be of use in the future.

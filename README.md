@@ -6,7 +6,7 @@ If carefully designed, an audio file can draw an image on a stereo oscilloscope.
 The scripts in this repository take in an arbitrary image or video as well as an arbitrary audio track,and outputs a .wav audio file that playes the audio track while drawing the given image/video when displayed on a stereo oscilloscope.
 
 ## Use Guide
-The project includes four notebooks for producing oscilloscope audio from different inputs:
+The project includes four Jupyter Notebooks for producing oscilloscope audio from different inputs:
 
 | Notebook | Audio Input | Image/Video Input |
 | --- | --- | --- |
@@ -16,6 +16,8 @@ The project includes four notebooks for producing oscilloscope audio from differ
 | `wav-video` | .wav | Video (tested with .mp4) |
 
 All notebooks write a .wav file which plays the input audio and draws the input image/video when displayed by a stereo oscilloscope.
+
+The project was tested in python 3.11.5. To download the required packages, run `pip install -r requirements.txt`
 
 ## Limitations
 

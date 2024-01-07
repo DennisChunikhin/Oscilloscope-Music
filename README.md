@@ -8,12 +8,12 @@ The scripts in this repository take in an arbitrary image or video as well as an
 ## Use Guide
 The project includes four notebooks for producing oscilloscope audio from different inputs:
 
-Notebook | Audio Input | Image/Video Input
---- | --- | --- | ---
-`midi-image` | MIDI (tested with type 1 and 2) | Image (tested with .jpg and .png)
-`midi-video` | MIDI (tested with type 1 and 2) | Video (tested with .mp4)
-`wav-image` | .wav | Image (tested with .jpg and .png)
-`wav-video` | .wav | Video (tested with .mp4)
+| Notebook | Audio Input | Image/Video Input |
+| --- | --- | --- |
+| `midi-image` | MIDI (tested with type 1 and 2) | Image (tested with .jpg and .png) |
+| `midi-video` | MIDI (tested with type 1 and 2) | Video (tested with .mp4) |
+| `wav-image` | .wav | Image (tested with .jpg and .png) |
+| `wav-video` | .wav | Video (tested with .mp4) |
 
 All notebooks write a .wav file which plays the input audio and draws the input image/video when displayed by a stereo oscilloscope.
 
@@ -68,9 +68,9 @@ where $`c^2 = a^2 + b^2 + 2ab\cos(\alpha)`$, $`\sin(\chi) = \frac{b}{c}\sin(\alp
 
 If $`\theta`$ and $`\phi`$, are the first and second most prominent frequencies given by the Fourier transform, we can often than note assume that b<<a, meaning b<<c. This assumption is merely based on qualitative observations.
 
-That b is much smaller than c implies that $$\chi$$ is small, more specifically that, on average, $`\chi<<\theta`$. Thus, we can approximate the weighted sum of sines as a signal with the most prominent frequency with amplitude modulated by c, that is $`c\sin(\theta)`$
+That b is much smaller than c implies that $`\chi`$ is small, more specifically that, on average, $`\chi<<\theta`$. Thus, we can approximate the weighted sum of sines as a signal with the most prominent frequency with amplitude modulated by c, that is $`c\sin(\theta)`$.
 
-If we assume $`a^2 + b^2 << 2ab`$, by the first order Taylor approximation we have
+If we assume $`a^2 + b^2 >> 2ab`$, by the first order Taylor approximation we have
 ```math
 c \approx \sqrt{a^2+b^2}\left( 1+\frac{ab}{a^2+b^2}\cos(\alpha) \right)
 ```

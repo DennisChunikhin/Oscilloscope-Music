@@ -75,6 +75,6 @@ If we assume $`a^2 + b^2 >> 2ab`$, by the first order Taylor approximation we ha
 c \approx \sqrt{a^2+b^2}\left( 1+\frac{ab}{a^2+b^2}\cos(\alpha) \right)
 ```
 
-Thus the two tones have frequencies $`f_1`$ and $`f_2`$, where $`\theta(t)=2 \pi f_1 t`$ and $`\phi(t)=2 \pi f_2 t`$, their combined chord can be represented as signal of frequency $`f_1`$ with the amplitude oscillating at a frequency of $`f_2-f_1`$ around the value $`\sqrt{a^2+b^2}`$.
+Thus, when two tones have frequencies $`f_1`$ and $`f_2`$, where $`\theta(t)=2 \pi f_1 t`$ and $`\phi(t)=2 \pi f_2 t`$, their combined chord can be represented as signal of frequency $`f_1`$ with the amplitude oscillating at a frequency of $`f_2-f_1`$ around the value $`\sqrt{a^2+b^2}`$.
 
 This approximation seems to qualitatively hold rather nicely. Though it is not currently used by the project, it might be of use in the future.
